@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src='js/jquery-1.11.1.js'></script>
+        <script>
+            $(function(){
+                var num=0
+                var timer;
+                function aa(){
+                    clearInterval(timer);
+                    timer=setInterval(function(){
+                        num+=1;
+                        if (num>3){
+                            num=0
+                        }
+                    $('.ul1').css('left',-747*num+'px')},1000);
+                }
+                aa();
+                $('.dright').hover(function() {
+                    clearInterval(timer)
+                }, function(){
+                        aa()
+                });
+                $('.zz1').click(function(event) {
+                    num=num+1;
+                    if (num>3){
+                        num=0
+                    }
+                    $('.ul1').css('left', -747*num+'px');
+                });
+                $('.zz2').click(function(event) {
+                    num=num-1
+                    if (num<0) {
+                        num=3;
+                    }
+                    $('.ul1').css('left', -747*num+'px');
+ 
+                });
+            })
+        </script>
+        <style>
+        	*{
+        		margin: 0;
+        		padding: 0;
+                list-style: none;
+                text-decoration: none;
+        	}
+        	.head{
+        		width:1000px;
+        		height: 70px;
+        		/* border: 1px red solid; */
+        		margin: 0 auto;
+        		overflow: hidden;
+
+        	}
+        	.logo{
+        		float: left;
+        		width:242px;
+        		height:34px;
+				/* border: 1px red solid; */
+        		background: url('images/sprite.png') no-repeat -28px 0px;
+        		/* background-size: 100%; */
+        		margin-top: 18px;
+        		margin-right: 74px;
+        	}
+        	.b{
+        		float: left;
+        		width:400px;
+        		height:70px;
+				/* border: 1px red solid; */
+        	}
+        	.b ul li{
+                float: left;
+                width:100px;
+                height:68px;
+                /* border: 1px red solid; */
+                text-align: center;
+                line-height: 70px;
+            }
+            .b ul li a{
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: bold;
+                color: #425766;
+            }
+        	.b ul li:hover{
+        		border-bottom: 2px #ff4500 solid;
+        	}
+        	.b ul li:hover a{
+        		color: #ff4500;
+        	}
+        	.body{
+        		width:100%;
+        		height:1000px;
+        		margin: 0 auto;
+        		background-color: #f6f8fa;
+        		overflow: hidden;
+        	}
+            #c1{
+                width:1000px;
+                height:220px;
+                margin:0 auto;
+                margin-top:20px;
+            }
+            #c1 .dleft{
+                width:240px;
+                height:218px;
+                float:left;
+                box-shadow: 0px 0px 30px #bdbfc0;
+            }
+            #c1 .dleft .dleft1{
+                width:200px;
+                height:40px;
+                background:#ff5f19;
+                margin-left: 20px;
+                margin-top:60px;
+                border-radius: 4px 4px;
+                text-align:center;
+                line-height:40px;
+                color:#fff;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            #c1 .dleft .dleft2{
+                width:200px;
+                height:30px;
+                margin-left: 20px;
+                margin-top:20px;
+                text-align:center;
+                line-height:30px;
+                color:#9aacbe;
+            }
+            #c1 .dleft .dleft2 p span{
+                color:#ff8154;
+            }
+            #c1 .dright{
+                width:747px;
+                height:218px;
+                float:right;
+                position: relative;
+                overflow: hidden;
+            }
+            #c1 .dright .ul1{
+                width:3000px;
+                position: relative;
+                top: 0;
+                left: -0px;
+            }
+            #c1 .dright .ul1 li{
+                float:left;
+            }
+            #c1 .dright{
+                width:747px;
+                height:218px;
+                float:right;
+                position: relative;
+                overflow: hidden;
+            }
+            #c1 .dright .ul1{
+                width:3000px;
+                position: relative;
+                top: 0;
+                left: -0px;
+            }
+            #c1 .dright .ul1 li{
+                float:left;
+            }
+            .zz1{
+                display:block;
+                width:36px;
+                height:66px;
+                background:url('images/sprite.png') no-repeat -236px -1869px;
+                position:absolute;
+                left:20px;
+                top: 50%;
+                margin-top: -33px;
+                z-index: 2;
+                cursor:pointer;
+            }
+            .zz2{
+                display:block;
+                width:36px;
+                height:66px;
+                background:url('images/sprite.png') no-repeat -236px -1934px;
+                position:absolute;
+                right:20px;
+                top: 50%;
+                margin-top: -33px;
+                z-index: 2;
+                cursor:pointer;
+            }
+            #c2{
+                width:1000px;
+                height:320px;
+                margin:0 auto;
+                margin-top:20px;
+                background:#fff;
+                overflow:hidden;
+            }
+            .c2bt{
+                height: 40px;
+                width: 300px;
+                margin-left: 50px;
+                margin-top: 26px;
+            }
+            #c2 .sp1{
+                width: 22px;
+                height: 22px;
+                background: url('images/sprite1.png') no-repeat -253px -2114px;
+                transform: scale(1.4);
+                margin-top: 8px;
+                margin-left: 14px;
+                margin-right: 8px;
+                float:left;
+            }
+            #c2 .sp2{
+                width: 156px;
+                height: 38px;
+                font-size: 20px;
+                font-weight: bold;
+                line-height:38px;
+                float:left;
+                font-family:'微软雅黑';
+                color:#435867;
+            }
+            #c2 .sp3{
+                width: 18px;
+                height: 38px;
+                margin-top: 2px;
+                float: left;
+            }
+            .c2nr{
+                width:800px;
+                height:200px;
+                margin: 10px auto;
+            }
+            .c2nr .nr1{
+                width: 200px;
+                height:200px;
+                background:url('images/circle.png') no-repeat;
+                position:relative;
+                float:left;
+                margin-right:100px;
+            }
+            .c2nr .nr2{
+                width: 200px;
+                height:200px;
+                background:url('images/circle.png') no-repeat;
+                position:relative;
+                float:left;
+            }
+            .ding1{
+                width: 44px;
+                height: 40px;
+                position: absolute;
+                top: 32%;
+                left: 50%;
+                margin-left: -20px;
+            }
+            .zi1{
+                font-size:40px;
+                color:#425766;
+            }
+            .zi2{
+                font-size: 20px;
+                color: #425766;
+                margin-left: -6px;
+            }
+            .ding2{
+                text-align: center;
+                position: absolute;
+                bottom: 18px;
+                left: 60px;
+                font-size: 14px;
+                font-family: '微软雅黑';
+                color:#a2bacf;
+            }
+            .ding3{
+                text-align: center;
+                position: absolute;
+                bottom: 18px;
+                left: 44px;
+                font-size: 14px;
+                font-family: '微软雅黑';
+                color:#a2bacf;
+            }
+            .wenhao{
+                width:24px;
+                height:24px;
+                background:url('images/sprite1.png') no-repeat -247px -2135px;
+                position:absolute;
+                top: 0;
+                right:0;
+                cursor:pointer;
+            }
+            #c3{
+                width:1000px;
+                height:350px;
+                margin:0 auto;
+                margin-top:20px;
+                background:#fff;
+                overflow:hidden;
+                margin-bottom:100px;
+            }
+            .c3bt{
+                height: 40px;
+                width: 700px;
+                margin-left: 50px;
+                margin-top: 26px;
+                margin-bottom: 10px;
+            }
+            #c3 .sp11{
+                width: 22px;
+                height: 22px;
+                background: url('images/sprite1.png') no-repeat -253px -2181px;
+                transform: scale(1.4);
+                margin-top: 8px;
+                margin-left: 14px;
+                margin-right: 8px;
+                float:left;
+            }
+            #c3 .sp22{
+                width: 200px;
+                height: 38px;
+                font-size: 20px;
+                font-weight: bold;
+                line-height:38px;
+                float:left;
+                font-family:'微软雅黑';
+                color:#435867;
+            }
+            #c3 .sp33{
+                width: 100px;
+                height: 38px;
+                margin-top: 2px;
+                float: left;
+                text-align:center;
+                line-height:38px;
+                color:#435867;
+                font-family:'微软雅黑';
+                font-weight:bold;
+                cursor:pointer;
+            }
+            #c3 .sp33:hover{
+                border-bottom:2px solid #88b7ee;
+                color:#88b7ee;
+            }
+            .jfxq{
+                width:800px;
+                height:180px;
+                border-bottom:1px solid #e5e8ec;
+                margin:0 auto;
+                position:relative;
+            }
+            .jfxq ul{
+                position:absolute;
+                bottom:-28px;
+                left:0;
+            }
+            .jfxq ul li{
+                width:64px;
+                float:left;
+                margin-right: 16px;
+            }
+            .jfxq ul li p{
+                color:#94b0d3;
+                font-family:'微软雅黑';
+                font-size:14px;
+            }
+            .wei{
+                text-align:center;
+            }
+            .dian{
+                display:inline-block;
+                width:5px;
+                height:5px;
+                background:#7bafec;
+                margin-bottom:6px;
+            }
+        </style>
+    </head>
+    <body> 
+    	<div class='head'>
+    		<div class='logo'></div>
+    		<div class='b'>
+    			<ul type='none'>
+    				<li><a href="03conversion privilege.html">兑换特权</a></li>
+    				<li><a href="03my points.html">我的积分</a></li>
+    				<li><a href="03integral rule.html">积分规则</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	
+        <div class='body'>
+    		
+            <div id="c1">
+                <div class="dleft">
+                    <div class="dleft1">登录签到</div>
+                    <div class="dleft2">
+                        <p>已连续签到<span>0</span>天</p>
+                    </div>
+                </div>
+                <div class="dright">
+                    <span class="zz1"></span>
+                    <span class="zz2"></span>
+                    <ul class="ul1">
+                        <li><img src="images/banner01.png" alt=""></li>
+                        <li><img src="images/banner02.png" alt=""></li>
+                        <li><img src="images/banner03.jpg" alt=""></li>
+                        <li><img src="images/banner04.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="c2">
+                <ul class="c2bt">
+                    <li class="sp1"></li>
+                    <li class="sp2">昨日获得积分:</li>
+                    <li class="sp3"><img src="images/one.png" alt="" height="80%"></li>
+                    <li class="sp3"><img src="images/four.png" alt="" height="80%"></li>
+                </ul>
+                <ol class="c2nr">
+                    <li class="nr1">
+                        <div class="ding1">
+                            <span class="zi1">0</span>
+                            <span class="zi2">分</span>
+                        </div>
+                        <div class="ding2">
+                            <p>5分/小时</p>
+                            <p>昨日登陆增长</p>
+                        </div>
+                        <span class="wenhao"></span>
+                    </li>
+                    <li class="nr1">
+                        <div class="ding1">
+                            <span class="zi1">0</span>
+                            <span class="zi2">分</span>
+                        </div>
+                        <div class="ding2">
+                            <p>3分/小时</p>
+                            <p>昨日搜索增长</p>
+                        </div>
+                        <span class="wenhao"></span>
+                    </li>
+                    <li class="nr2">
+                        <div class="ding1">
+                            <span class="zi1">0</span>
+                            <span class="zi2">分</span>
+                        </div>
+                        <div class="ding3">
+                            <p>1分/小时</p>
+                            <p>昨日网页访问增长</p>
+                        </div>
+                        <span class="wenhao"></span>
+                    </li>
+                </ol>
+            </div>
+            <div id="c3">
+                <ul class="c3bt">
+                    <li class="sp11"></li>
+                    <li class="sp22">近10天获得积分详情:</li>
+                    <li class="sp33">在线</li>
+                    <li class="sp33">搜索</li>
+                    <li class="sp33">网页访问</li>
+                </ul>
+                <div class="jfxq">
+                    <ul>
+                        <li>
+                            <div class="wei">
+                                <span class="dian"></span>
+                                <p>11月14日</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wei">
+                                <span class="dian"></span>
+                                <p>15日</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wei">
+                                <span class="dian"></span>
+                                <p>16日</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wei">
+                                <span class="dian"></span>
+                                <p>17日</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wei">
+                                <span class="dian"></span>
+                                <p>18日</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wei">
+                                <span class="dian"></span>
+                                <p>19日</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wei">
+                                <span class="dian"></span>
+                                <p>20日</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wei">
+                                <span class="dian"></span>
+                                <p>21日</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wei">
+                                <span class="dian"></span>
+                                <p>22日</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wei">
+                                <span class="dian"></span>
+                                <p>23日</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+    	</div>
+
+    </body>
+</html>

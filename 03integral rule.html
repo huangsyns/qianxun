@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+        	*{
+        		margin: 0;
+        		padding: 0;
+        	}
+        	.head{
+        		width:1000px;
+        		height: 70px;
+        		/* border: 1px red solid; */
+        		margin: 0 auto;
+        		overflow: hidden;
+        	}
+        	.logo{
+        		float: left;
+        		width:242px;
+        		height:34px;
+				/* border: 1px red solid; */
+        		background: url('images/sprite.png') no-repeat -28px 0px;
+        		/* background-size: 100%; */
+        		margin-top: 18px;
+        		margin-right: 74px;
+        	}
+        	.b{
+        		float: left;
+        		width:400px;
+        		height:70px;
+				/* border: 1px red solid; */
+        	}
+        	.b ul li{
+                float: left;
+                width:100px;
+                height:68px;
+                /* border: 1px red solid; */
+                text-align: center;
+                line-height: 70px;
+            }
+            .b ul li a{
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: bold;
+                color: #425766;
+            }
+        	.b ul li:hover{
+        		border-bottom: 2px #ff4500 solid;
+        	}
+        	.b ul li:hover a{
+        		color: #ff4500;
+        	}
+        	.body{
+        		width:100%;
+        		height:850px;
+        		margin: 0 auto;
+        		background-color: #f6f8fa;
+        		overflow: hidden;
+        	}
+        	.content{
+        		width:1000px;
+        		height:750px;
+        		margin: 0 auto;
+        		/* border: 1px red solid; */
+        		margin-top: 40px;
+        	}
+            table{
+                text-align: center;
+                line-height: 50px;
+                border: 1px solid #ccc;
+                border-collapse: collapse;
+            }
+            tr{
+                border: 1px solid #ccc;
+            }
+            .tablehead{
+                background: #eee;
+            }
+            .tablehead td{
+                font-weight: bold;
+            }
+            td{
+                font-size: 14px;
+            }
+            .content p{
+                font-size: 14px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body> 
+    	<div class='head'>
+    		<div class='logo'></div>
+    		<div class='b'>
+    			<ul type='none'>
+    				<li><a href="03conversion privilege.html">兑换特权</a></li>
+    				<li><a href="03my points.html">我的积分</a></li>
+    				<li><a href="03integral rule.html">积分规则</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	
+        <div class='body'>
+    		<div class='content'>
+                <h4>百度浏览器积分商城是什么？</h4>
+                <p>为答谢忠实用户，百度浏览器搭建了积分商城，作为向忠实用户免费发放福利的平台。</p>
+                <br>
+                <h4>积分的用途是什么？</h4>
+                <p>用积分可以兑换百度浏览器向忠实用户提供的特权，每类特权每天仅限兑换1个。目前积分商城已经支持用积分兑换爱奇艺VIP、百度文库VIP，特权阵营还在持续扩大，如果您还想要其他特权，可以告诉我们。</p>
+                <br>
+                <h4>如何获得积分？</h4>
+                <p>您只需要登录百度浏览器，日常进行搜索和访问网页就会产生积分，这些积分会计入您登录百度浏览器时使用的百度帐号中，每日最高可获得320积分。</p>
+                <table>
+                    <tr class='tablehead'>
+                        <td width='162px'>获得途径</td>
+                        <td width='185px'>分值</td>
+                        <td width='185px'>每日上限</td>
+                        <td width='406px'>说明</td>
+                    </tr>
+                    <tr>
+                        <td>登录在线</td>
+                        <td>5分/小时</td>
+                        <td>120分</td>
+                        <td>超过半小时按一个小时计算，未到半小时不记</td>
+                    </tr>
+                    <tr>
+                        <td>百度搜索</td>
+                        <td>3分/个</td>
+                        <td>150分</td>
+                        <td>需不同搜索词，相同搜索词不重复计算分数</td>
+                    </tr>
+                    <tr>
+                        <td>浏览网页</td>
+                        <td>1分/个</td>
+                        <td>50分</td>
+                        <td>需不同网页地址，相同网页不重复计算分数</td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <p><h4>积分消耗</h4></p>
+                
+                <table>
+                    <tr class='tablehead'>
+                        <td width='200px'>消耗途径</td>
+                        <td width='200px'>分值</td>
+                    </tr>
+                    <tr>
+                        <td>兑换特权</td>
+                        <td>对应特权积分</td>
+                    </tr>
+                    <tr>
+                        <td>连续30天未登录</td>
+                        <td>积分减少50%</td>
+                    </tr>
+                    <tr>
+                        <td>连续60天未登录</td>
+                        <td>积分减少50%</td>
+                    </tr>
+                    <tr>
+                        <td>连续90天未登录</td>
+                        <td>积分清零</td>
+                    </tr>
+                </table>
+                
+                <br>
+                <p>积分兑换特权系百度浏览器赠送给用户的免费福利，最终解释权归百度浏览器所有</p>
+            </div>
+    	
+        </div>
+    </body>
+</html>

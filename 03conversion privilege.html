@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src='js/jquery-1.11.1.js'></script>
+        <script>
+            $(function(){
+                var num=0
+                var timer;
+                function aa(){
+                    clearInterval(timer);
+                    timer=setInterval(function(){
+                        num+=1;
+                        if (num>3){
+                            num=0
+                        }
+                    $('.ul1').css('left',-747*num+'px')},1000);
+                }
+                aa();
+                $('.dright').hover(function() {
+                    clearInterval(timer)
+                }, function(){
+                        aa()
+                });
+                $('.zz1').click(function(event) {
+                    num=num+1;
+                    if (num>3){
+                        num=0
+                    }
+                    $('.ul1').css('left', -747*num+'px');
+                });
+                $('.zz2').click(function(event) {
+                    num=num-1
+                    if (num<0) {
+                        num=3;
+                    }
+                    $('.ul1').css('left', -747*num+'px');
+ 
+                });
+            })
+        </script>
+        <style>
+        	*{
+        		margin: 0;
+        		padding: 0;
+                text-decoration: none;
+                list-style: none;
+        	}
+        	.head{
+        		width:1000px;
+        		height: 70px;
+        		/* border: 1px red solid; */
+        		margin: 0 auto;
+        		overflow: hidden;
+        	}
+        	.logo{
+        		float: left;
+        		width:242px;
+        		height:34px;
+				/* border: 1px red solid; */
+        		background: url('images/sprite.png') no-repeat -28px 0px;
+        		/* background-size: 100%; */
+        		margin-top: 18px;
+        		margin-right: 74px;
+        	}
+        	.b{
+        		float: left;
+        		width:400px;
+        		height:70px;
+				/* border: 1px red solid; */
+        	}
+        	.b ul li{
+        		float: left;
+        		width:100px;
+        		height:68px;
+				/* border: 1px red solid; */
+				text-align: center;
+				line-height: 70px;
+        	}
+        	.b ul li a{
+        		text-decoration: none;
+                font-size: 14px;
+                font-weight: bold;
+        		color: #425766;
+        	}
+        	.b ul li:hover{
+        		border-bottom: 2px #ff4500 solid;
+        	}
+        	.b ul li:hover a{
+        		color: #ff4500;
+        	}
+        	.body{
+        		width: 100%;
+        		height:1700px;
+        		margin: 0 auto;
+        		background-color: #f6f8fa;
+        		overflow: hidden;
+        	}
+            /* .c1{
+                width: 950px;
+                height:220px;
+                margin: 0 auto;
+                border: 1px red solid; 
+                margin-top: 20px;
+                overflow: hidden;
+                box-shadow: 0px 0px 30px -4px gray;
+            }
+            .c11{
+                width: 182px;
+                height:220px;
+                border: 1px red solid;
+                float: left;
+                margin-right: 18px;
+                box-shadow: 0px 0px 30px -4px gray;
+            }
+            .c11 a{
+                text-decoration: none;
+            }
+            .c111{
+                width:143px;
+                height:60px;
+                border: 1px red solid;
+                margin: 0 auto;
+                background: url('../images/sprite.png')no-repeat -120px -1492px;
+                margin-top: 50px;
+                color: white;
+                font-size: 18px;
+                text-align: center;
+                line-height: 42px;
+
+            }
+            .c112{
+                width: 154px;
+                height:50px;
+                border: 1px red solid;
+                color: gray;
+                font-size: 14px;
+                margin: 0 auto;
+                margin-top: 12px;
+                text-align: center;
+                line-height: 24px;
+            }
+            .c12{
+                width: 750px;
+                height:220px;
+                border: 1px red solid;
+                float: left;
+            } */
+            /* .c2{
+                width: 950px;
+                height:350px;
+                margin: 0 auto;
+                border: 1px red solid;
+                margin-top: 20px;
+                overflow: hidden;
+                box-shadow: 0px 0px 30px -4px gray;
+            }
+            .c21{
+                width: 950px;
+                height: 40px;
+                border: 1px red solid;
+            }
+            .c211{
+                width: 56px;
+                height: 40px;
+                float: right;
+                font-size: 14px;
+                text-align: center;
+                line-height: 40px;
+                border: 1px red solid;
+            }
+            .c211 a{
+                text-decoration: none;
+                color: gray;
+            }*/
+            #c1{
+                width:1000px;
+                height:220px;
+                margin:0 auto;
+                margin-top:20px;
+            }
+            #c1 .dleft{
+                width:240px;
+                height:218px;
+                // background:skyblue;
+                float:left;
+                box-shadow: 0px 0px 30px #bdbfc0;
+            }
+            #c1 .dleft .dleft1{
+                width:200px;
+                height:40px;
+                background:#3285fa;
+                margin-left: 20px;
+                margin-top:60px;
+                border-radius: 4px 4px;
+                text-align:center;
+                line-height:40px;
+                color:#fff;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            #c1 .dleft .dleft2{
+                width:200px;
+                height:30px;
+                margin-left: 20px;
+                margin-top:20px;
+                text-align:center;
+                line-height:30px;
+                color:#9aacbe;
+                // font-size: 20px;
+            }
+            #c1 .dleft .dleft2 p span{
+                color:#ff8154;
+                // font-size: 20px;
+            }
+            #c1 .dright{
+                width:747px;
+                height:218px;
+                float:right;
+                position: relative;
+                overflow: hidden;
+            }
+            #c1 .dright .ul1{
+                width:3000px;
+                position: relative;
+                top: 0;
+                left: -0px;
+            }
+            #c1 .dright .ul1 li{
+                float:left;
+            }
+            #c1 .dright{
+                width:747px;
+                height:218px;
+                float:right;
+                position: relative;
+                overflow: hidden;
+            }
+            #c1 .dright .ul1{
+                width:3000px;
+                position: relative;
+                top: 0;
+                left: -0px;
+            }
+            #c1 .dright .ul1 li{
+                float:left;
+            }
+            .zz1{
+                display:block;
+                width:36px;
+                height:66px;
+                background:url('images/sprite.png') no-repeat -236px -1869px;
+                position:absolute;
+                left:20px;
+                top: 50%;
+                margin-top: -33px;
+                z-index: 2;
+                cursor:pointer;
+            }
+            .zz2{
+                display:block;
+                width:36px;
+                height:66px;
+                background:url('images/sprite.png') no-repeat -236px -1934px;
+                position:absolute;
+                right:20px;
+                top: 50%;
+                margin-top: -33px;
+                z-index: 2;
+                cursor:pointer;
+            }
+            #c2{
+                width:1000px;
+                height:340px;
+                box-shadow: 0px 0px 30px #cdced0;
+                margin:0 auto;
+                margin-top:10px;
+            }
+            .h2t{
+                width:100%;
+                height:30px;
+                margin-bottom: 10px;
+            }
+            .h2t1{
+                float:left;
+            }
+            .h2t2{
+                float:right;
+                padding-top:10px;
+                padding-bottom: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .h2t2 a{
+                color:#939da5;
+                font-size:14px;
+            }
+            .h2u{
+                width:1000px;
+                height:300px;
+            }
+            .h2u1{
+                width:444px;
+                height:280px;
+                border-right: 1px solid #e2e5e9;
+                float:left;
+            }
+            .h2u1 .bg1{
+                width:300px;
+                height:200px;
+                background:url('images/pptv_bg.png') no-repeat ;
+                margin-top: 26px;
+                margin-left: 74px;
+            }
+            .xbt{
+                width:300px;
+                height:40px;
+                font-family:"微软雅黑";
+                margin:0 auto;
+            }
+            .xbt img,h3{
+                float:left;
+                line-height:40px;
+                text-align:center;
+                color:#425766;
+            }
+            .h2u2{
+                width:500px;
+                height:300px;
+                float:left;
+            }
+            .h2u2 ul{
+                width:420px;
+                height:300px;
+                margin:0 auto;
+            }
+            .h2u2 li{
+                width:210px;
+                height:276px;
+                background:url('images/prize.png') no-repeat;
+                float:left;
+            }
+            .h2u2 li img{
+                margin-top:10px;
+                margin-left:20px;
+            }
+            .h2u2 li span:nth-of-type(1){
+                // margin-top:10px;
+                font-size:26px;
+                font-weight: bold;
+                margin-left:20px;
+                color:#425766;
+            }
+            .h2u2 li span:nth-of-type(2){
+                // margin-top:10px;
+                font-size:14px;
+                color:#425766;
+            }
+            .h2u3{
+                width:444px;
+                height:280px;
+                margin-left: 36px;
+                border-right: 1px solid #e2e5e9;
+                float:left;
+            }
+            .h2u3 .bg2{
+                width:300px;
+                height:200px;
+                background:url('images/iqy_bg.png') no-repeat 90px 0px;
+                margin-top: 26px;
+                margin-left: 74px;
+            }
+            .h2u4{
+                width:444px;
+                height:280px;
+                margin-left: 36px;
+                border-right: 1px solid #e2e5e9;
+                float:left;
+            }
+            .h2u4 .bg3{
+                width:300px;
+                height:220px;
+                background:url('images/bdy_bg.png') no-repeat 0px 0px;
+                margin-top: 26px;
+                margin-left: 74px;
+            }
+            .h2u5{
+                width:444px;
+                height:280px;
+                margin-left: 36px;
+                border-right: 1px solid #e2e5e9;
+                float:left;
+            }
+            .h2u5 .bg4{
+                width:300px;
+                height:220px;
+                background:url('images/txt_bg.png') no-repeat 0px 0px;
+                margin-top: 26px;
+                margin-left: 74px;
+            }
+            #c3{
+                width:1000px;
+                height:340px;
+                box-shadow: 0px 0px 30px #cdced0;
+                margin:0 auto;
+                margin-top:10px;
+                margin-bottom:50px;
+            }
+        </style>
+    </head>
+    <body> 
+    	<div class='head'>
+    		<div class='logo'></div>
+    		<div class='b'>
+    			<ul type='none'>
+    				<li><a href="03conversion privilege.html">兑换特权</a></li>
+    				<li><a href="03my points.html">我的积分</a></li>
+    				<li><a href="03integral rule.html">积分规则</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	
+        <div class='body'>
+
+                <!-- <div class='c1'>
+                    <div class="c11">
+                        <a href="javascript:void(0)"><div class="c111">登录签到</div></a>
+                        <div class="c112">
+                            <p>赚积分换特权</p>
+                            <p>连续签到3天还能抽大奖!</p>
+                        </div>
+                    </div>
+                    <div class="c12"><a href="javascript:void(0)"><img src="../images/banner01.png" alt="" width='100%' height='100%'></a></div>
+                </div> -->
+
+                <div id="c1">
+                    <div class="dleft">
+                        <div class="dleft1">登录签到</div>
+                        <div class="dleft2">
+                            <p>赚积分换特权</p>
+                            <p>连续签到<span>3</span>天还能抽大奖！</p>
+                        </div>
+                    </div>
+                    <div class="dright">
+                        <span class="zz1"></span>
+                        <span class="zz2"></span>
+                        <ul class="ul1">
+                            <li><img src="images/banner01.png" alt=""></li>
+                            <li><img src="images/banner02.png" alt=""></li>
+                            <li><img src="images/banner03.jpg" alt=""></li>
+                            <li><img src="images/banner04.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="c2">
+                    <div class="h2t">
+                        <div class="h2t1"><img src="images/new.png" alt=""></div>
+                        <div class="h2t2"><a href="javascript:void(0)">了解更多</a></div>
+                    </div>
+                    <div class="h2u">
+                        <div class="h2u1">
+                            <div class="xbt"><img src="images/pptv.png" alt="">
+                            <h3>PPTV聚力会员激活码</h3></div>
+                            <div class="bg1"></div>
+                        </div>
+                        <div class="h2u2">
+                            <ul>
+                                <li>
+                                    <img src="images/pptv7.png" alt="">
+                                    <span>500</span><span>积分</span>
+                                </li>
+                                <li>
+                                    <img src="images/pptvm.png" alt="">
+                                    <span>1500</span><span>积分</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="c2">
+                    <div class="h2t">
+                        <div class="h2t2"><a href="javascript:void(0)">了解更多</a></div>
+                    </div>
+                    <div class="h2u">
+                        <div class="h2u3">
+                            <div class="xbt"><img src="images/iqy.png" alt="">
+                            <h3>爱奇艺VIP激活码</h3></div>
+                            <div class="bg2"></div>
+                        </div>
+                        <div class="h2u2">
+                            <ul>
+                                <li>
+                                    <img src="images/iqyday.png" alt="">
+                                    <span>500</span><span>积分</span>
+                                </li>
+                                <li>
+                                    <img src="images/iqymonth.png" alt="">
+                                    <span>10000</span><span>积分</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="c2">
+                    <div class="h2t">
+                        <div class="h2t2"><a href="javascript:void(0)">了解更多</a></div>
+                    </div>
+                    <div class="h2u">
+                        <div class="h2u4">
+                            <div class="xbt"><img src="images/bdc.png" alt="">
+                            <h3>百度云会员激活码</h3></div>
+                            <div class="bg3"></div>
+                        </div>
+                        <div class="h2u2">
+                            <ul>
+                                <li>
+                                    <img src="images/bdyone.png" alt="">
+                                    <span>400</span><span>积分</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="c3">
+                    <div class="h2t">
+                        <div class="h2t2"><a href="javascript:void(0)">了解更多</a></div>
+                    </div>
+                    <div class="h2u">
+                        <div class="h2u5">
+                            <div class="xbt"><img src="images/txt.png" alt="">
+                            <h3>爱奇艺VIP激活码</h3></div>
+                            <div class="bg4"></div>
+                        </div>
+                        <div class="h2u2">
+                            <ul>
+                                <li>
+                                    <img src="images/txt_day.png" alt="">
+                                    <span>500</span><span>积分</span>
+                                </li>
+                                <li>
+                                    <img src="images/txt_month.png" alt="">
+                                    <span>10000</span><span>积分</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class='c2'>
+                    <div class='c21'>
+                        <span><img src="../images/new.png" alt=""></span>
+                        <div class='c211'><a href="javascript:void(0)">了解更多</a></div>
+                
+                    </div>
+                </div>     
+                <div class='c2'>
+                    <div class='c21'>
+                        <div class='c211'><a href="javascript:void(0)">了解更多</a></div>
+                
+                    </div>
+                </div>     
+                <div class='c2'>
+                    <div class='c21'>
+                        <div class='c211'><a href="javascript:void(0)">了解更多</a></div>
+                
+                    </div>
+                </div>     
+                <div class='c2'>
+                    <div class='c21'>
+                        <div class='c211'><a href="javascript:void(0)">了解更多</a></div>
+                
+                    </div>
+                </div>      -->
+    	</div>
+
+    </body>
+</html>

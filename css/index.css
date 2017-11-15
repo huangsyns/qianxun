@@ -1,0 +1,670 @@
+/*
+* @Author: hsy
+* @Date:   2017-08-07 09:56:49
+* @Last Modified by:   hsy
+* @Last Modified time: 2017-08-14 19:36:36
+*/
+*{
+	margin:0;
+	padding:0;
+	list-style: none;
+	text-decoration: none;
+}
+html,body,section{
+	width:100%;
+	height:100%;
+}
+body{
+	overflow: hidden;
+}
+.logo01{
+	position:fixed;
+	top:20px;
+	left:40px;
+	z-index:1;
+}
+.music{
+	position:fixed;
+	top:30px;
+	right:30px;
+	z-index:1;
+}
+.play{
+	animation:circle 2s linear infinite;
+}
+.side{
+	position:fixed;
+	top:50%;
+	right:30px;
+	margin-top: -200px;
+	z-index: 1;
+}
+.side li{
+	width:20px;
+	height:20px;
+	border: 1px solid #dd5a2e;
+	border-radius: 50%;
+	margin-top:30px;
+	cursor: pointer;
+}
+.side .current{
+	background:url('../images/side_bg.png') center;
+	background-size:90%;
+	width:40px;
+	height:40px;
+	border:none;
+	margin-left:-10px;
+	margin-top:30px;
+	animation:circle 3s linear infinite;
+}
+@keyframes circle{
+	from{
+		transform:rotate(0deg)
+	}
+	to{
+		transform:rotate(360deg)
+	}
+}
+section{
+	position:relative;
+	top:0;
+	left:0;
+}
+section>div{
+	width:100%;
+	height: 100%;
+	position:relative;
+}
+.title{
+	width:100%;
+	height:100px;
+	position:absolute;
+	left:0;
+	bottom:240px;
+	text-align: center;
+
+}
+.title span{
+	background:url('../images/logo-text.png') no-repeat right center;
+	display: inline-block;
+	width:120px;
+	height:45px;
+	transition:1s;
+}
+.title>img{
+	transition:1s;
+}
+.title p{
+	width:324px;
+	margin:0 auto;
+	color:white;
+	font-size: 12px;
+	transition:1s;
+	margin-top:10px;
+}
+.no>img{
+	margin-left:-1000px;
+	transform:rotate(180deg);
+}
+.no p{
+	transform:scale(0.1);
+}
+.down{
+	width:300px;
+	height:78px;
+	position:fixed;
+	left:50%;
+	margin-left:-150px;
+	bottom:150px;
+	z-index:1;
+}
+.banben{
+	width:300px;
+	height:40px;
+	// border:1px red solid;
+	position:fixed;
+	left:50%;
+	margin-left:-150px;
+	bottom:102px;
+	z-index:1;
+	color:white;
+	font-size:12px;
+	line-height:20px;
+}
+.footer{
+    width:100%;
+    height:50px;
+    background:black;
+    position:fixed;
+    bottom:0;
+    z-index:1;
+    opacity:0.5;
+}
+.f2 ul{
+    width:1000px;
+    height:50px;
+    position:fixed;
+    bottom:0;
+    left:50%;
+    margin-left:-500px;
+}
+.f2 ul li{
+    width:200px;
+    height:50px;
+    color:white;
+    font-size:14px;
+    text-align:center;
+    line-height: 50px;
+    float:left;
+}
+.f2 ul li a{
+    text-decoration: none;
+    color:white;
+}
+.f2 ul li a:hover{
+    font-weight: bold;
+}
+.screen1{
+	background: url('../images/bg01.jpg');
+	background-size:100% 100%;
+	position:relative;
+}
+.balloon
+{
+	width:108px;
+	height:120px;
+	background:url('../images/balloon.png');
+	background-size:100% 100%;
+	z-index:1;
+	position:absolute;
+	left:50%;
+	margin-left:-54px;
+	top:16%;
+	animation:jump 6s linear infinite;
+}
+@keyframes jump{
+	0%{
+		top:16%;
+	}
+	50%{
+		top:10%;
+	}
+	100%{
+		top:16%;
+	}
+}
+.cloud1{
+	width:152px;
+	height:120px;
+	background:url('../images/cloud.png') no-repeat;
+	background-size:100% 100%;
+	z-index:2;
+	position:absolute;
+	right:5%;
+	/* margin-left:-20px; */
+	top:5%;
+	animation:wave 120s linear infinite;
+}
+.cloud2{
+	width:136px;
+	height:38px;
+	background:url('../images/scloud.png') no-repeat;
+	background-size:100% 100%;
+	z-index:2;
+	position:absolute;
+	right:5%;
+	/* margin-left:-20px; */
+	top:34%;
+	animation:wave 60s linear infinite;
+}
+@keyframes wave{
+	0%{
+		right:10%;
+	}
+	50%{
+		right:90%;
+	}
+	100%{
+		right:10%;
+	}
+}
+.screen2{
+	background: url('../images/bg02.jpg');
+	background-size:100% 100%;
+	position:relative;
+}
+.compass{
+	width:102px;
+	height:116px;
+	background:url('../images/compass.png');
+	background-size:100% 100%;
+	// z-index:1;
+	position:absolute;
+	left:50%;
+	margin-left:-51px;
+	top:16%;
+}
+.pointer{
+	width:64px;
+	height:64px;
+	background:url('../images/compass-pointer.png');
+	background-size:100% 100%;
+	z-index:1;
+	position:absolute;
+	left:50%;
+	margin-left:-32px;
+	top:17%;
+	animation:revolve 10s linear infinite;
+}
+@keyframes revolve{
+	0%{
+		transform:rotate(0deg);
+	}
+	25%{
+		transform:rotate(90deg);
+	}
+	50%{
+		transform:rotate(180deg);
+	}
+	75%{
+		transform:rotate(270deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+.screen3{
+	background: url('../images/bg03.jpg');
+	background-size:100% 100%;
+	position:relative;
+}
+.conch
+{
+	width:104px;
+	height:120px;
+	background:url('../images/conch.png');
+	background-size:100% 100%;
+	z-index:1;
+	position:absolute;
+	left:50%;
+	margin-left:-52px;
+	top:16%;
+	animation:jump 10s linear infinite;
+}
+.ul3{
+	width: 160px;
+    height: 300px;
+    z-index:2;
+    float:left;
+    position: absolute;
+    left:50%;
+    margin-left:-80px;
+}
+.paopao1{
+	width:12px;
+	height:12px;
+	background:url('../images/pao04.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:250px;
+	left:12px;
+	animation:paopao 5s infinite linear;
+
+}
+.paopao2{
+	width:12px;
+	height:12px;
+	background:url('../images/pao04.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:250px;
+	left:24px;
+	animation:paopao 3s infinite linear;
+}
+.paopao3{
+	width:22px;
+	height:22px;
+	background:url('../images/pao01.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:250px;
+	left:36px;
+	animation:paopao 7s infinite linear;
+
+}
+.paopao4{
+	width:12px;
+	height:12px;
+	background:url('../images/pao04.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:250px;
+	left:58px;
+	animation:paopao 4s infinite linear;
+
+}.paopao5{
+	width:22px;
+	height:22px;
+	background:url('../images/pao01.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:250px;
+	left:70px;
+	animation:paopao 6s infinite linear;
+
+}
+.paopao6{
+	width:22px;
+	height:22px;
+	background:url('../images/pao01.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:250px;
+	left:90px;
+	animation:paopao 8s infinite linear;
+}
+.paopao7{
+	width:8px;
+	height:8px;
+	background:url('../images/pao08.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:250px;
+	left:110px;
+	animation:paopao 1s infinite linear;
+
+}
+.paopao8{
+	width:8px;
+	height:8px;
+	background:url('../images/pao08.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:250px;
+	left:118px;
+	animation:paopao 3s infinite linear;
+
+}
+.paopao9{
+	width:12px;
+	height:12px;
+	background:url('../images/pao08.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:250px;
+	left:130px;
+	animation:paopao 2s infinite linear;
+
+}
+@keyframes paopao{
+	0%{
+		top: 250px;
+	}
+	100%{
+		top:-20px;
+	}
+}
+.screen4{
+	background: url('../images/bg04.jpg');
+	background-size:100% 100%;
+	position:relative;
+}
+.balloon2{
+	width:130px;
+	height:168px;
+	background:url('../images/ballon04.png');
+	background-size:100% 100%;
+	z-index:1;
+	position:absolute;
+	left:50%;
+	margin-left:-68px;
+	top:16%;
+	animation:jump2 6s linear infinite;
+}
+@keyframes jump2{
+	0%{
+		transform:rotate(0deg);
+	}
+	25%{
+		transform:rotate(-10deg);
+	}
+	50%{
+		transform:rotate(10deg);
+	}
+	75%{
+		transform:rotate(-10deg);
+	}
+	100%{
+		transform:rotate(0deg);
+	}
+}
+.screen5{
+	background: url('../images/bg05.jpg');
+	background-size:100% 100%;
+	position:relative;
+}
+.pic02{
+	width:130px;
+	height:168px;
+	background:url('../images/pic02.png');
+	background-size:100% 100%;
+	position:absolute;
+	left:50%;
+	margin-left:-68px;
+	top:16%;
+	animation:jump3 1s linear infinite;
+}
+@keyframes jump3{
+	from{
+		transform:scale(1);
+	}
+	to{
+		transform:scale(2);
+	}
+}
+.balloon3{
+	width:90px;
+	height:119px;
+	background:url('../images/fire-balloon03.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:420px;
+	right:230px;
+	animation:jump4 6s infinite linear;
+}
+@keyframes jump4{
+	0%{
+		top:400px
+	}
+	50%{
+		top:360px;
+	}
+	100%{
+		top:400px;
+	}
+}
+.balloon4{
+	width:60px;
+	height:84px;
+	background:url('../images/fire-balloon02.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	top:350px;
+	right:130px;
+	animation:jump5 4s infinite linear;
+}
+@keyframes jump5{
+	0%{
+		top:350px
+	}
+	50%{
+		top:330px;
+	}
+	100%{
+		top:350px;
+	}
+}
+.screen6{
+	background: url('../images/bg06.jpg');
+	background-size:100% 100%;
+	position:relative;
+}
+.star{
+	width:100%;
+	height:100%;
+	background:url('../images/screen06_bg.png') no-repeat;
+	background-size:100% 80%;
+	position:absolute;
+	left:0;
+	top: 0px;
+	animation:jump6 4s infinite linear;
+}
+@keyframes jump6{
+	0%{
+		top: 0px;
+	}
+	100%{
+		top: 100px;
+	}
+}
+.craft{
+	width:128px;
+	height:300px;
+	background:url('../images/aircraft.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	left:50%;
+	margin-left:-64px;
+	top: 16%;
+	animation:jump7 10s infinite linear;
+}
+@keyframes jump7{
+	0%{
+		top: 16%;
+	}
+	50%{
+		top: 6%;
+	}
+	100%{
+		top: 16%;
+	}
+}
+.screen7{
+	background: url('../images/bg07.jpg');
+	background-size:100% 100%;
+	position:relative;
+}
+.blackhole{
+	width:200px;
+	height:226px;
+	background:url('../images/black-hole.png') no-repeat;
+	background-size:100%;
+	position:absolute;
+	left:50%;
+	margin-left:-100px;
+	top: 10%;
+}
+.blackhole2{
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    background: url('../images/black-hole-light.png') no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+    top: 2px;
+    z-index: 3;
+    animation:revolve2 6s infinite linear;
+}
+@keyframes revolve2{
+	0%{
+		transform:rotate(0deg)
+	}
+	50%{
+		transform:rotate(180deg)
+	}
+	100%{
+		transform:rotate(360deg)
+	}
+}
+.dot1{
+	display:block;
+	width:57px;
+	height:57px;
+	background:url('../images/dot.png') no-repeat;
+	position:absolute;
+	top: 0px;
+	left:0px;
+	animation:jump8 4s linear infinite;
+}
+.dot2{
+	display:block;
+	width:57px;
+	height:57px;
+	background:url('../images/dot.png') no-repeat;
+	position:absolute;
+	top: 0px;
+	right:0px;
+	animation:jump9 4s linear infinite;
+}
+.dot3{
+	display:block;
+	width:57px;
+	height:57px;
+	background:url('../images/dot.png') no-repeat;
+	position:absolute;
+	top: 300px;
+	left:0px;
+	animation:jump10 4s linear infinite;
+}
+.dot4{
+	display:block;
+	width:57px;
+	height:57px;
+	background:url('../images/dot.png') no-repeat;
+	position:absolute;
+	top: 300px;
+	right:0px;
+	animation:jump11 4s linear infinite;
+}
+@keyframes jump8{
+	from{
+		top: 0;
+		left:0px;
+	}
+	to{
+		top:150px;
+		left:46%;
+	}
+}
+@keyframes jump9{
+	from{
+		top: 0;
+		right:0px;
+	}
+	to{
+		top:150px;
+		right:46%;
+	}
+}
+@keyframes jump10{
+	from{
+		top: 300px;
+		left:-10px;
+	}
+	to{
+		top:150px;
+		left:46%;
+	}
+}
+@keyframes jump11{
+	from{
+		top: 300px;
+		right:0;
+	}
+	to{
+		top:150px;
+		right:46%;
+	}
+}
